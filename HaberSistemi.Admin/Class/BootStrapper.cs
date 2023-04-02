@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace HaberSistemi.Admin.Class
 {
-    
+
     public class BootStrapper
     {
         public static void RunConfig()
@@ -17,13 +17,13 @@ namespace HaberSistemi.Admin.Class
             BuildAutoFac();
 
         }
-        public static void BuildAutoFac() 
+        public static void BuildAutoFac()
         {
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-        
+
         }
     }
 }
