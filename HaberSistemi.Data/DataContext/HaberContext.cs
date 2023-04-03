@@ -12,7 +12,7 @@ namespace HaberSistemi.Data.DataContext
     public class HaberContext : DbContext
     {
         public DbSet<Kullanici> Kullanici { get; set; }
-        public DbSet<Rol> Rols { get; set; }
+        public DbSet<Rol> Rol { get; set; }
         public DbSet<Haber> Haber { get; set; }
         public DbSet<Resim> Resim { get; set; }
     }
