@@ -101,7 +101,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DataContext\HaberContext.cs" />
     <Compile Include="Migrations\202303251046205_Olustur.cs" />
     <Compile Include="Migrations\202303251046205_Olustur.designer.cs">
