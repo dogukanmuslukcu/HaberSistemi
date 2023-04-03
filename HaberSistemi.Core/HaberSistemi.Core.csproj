@@ -57,6 +57,7 @@
     <Compile Include="Infrastructure\IResimRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\HaberRepository.cs" />
+    <Compile Include="Repository\KullaniciRepository.cs" />
     <Compile Include="Repository\ResimRepository.cs" />
   </ItemGroup>
   <ItemGroup>
