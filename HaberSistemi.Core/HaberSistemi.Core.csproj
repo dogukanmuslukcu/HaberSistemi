@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\IHaberRepository.cs" />
+    <Compile Include="Infrastructure\IKullaniciRepository.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Infrastructure\IResimRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
