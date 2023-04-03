@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HaberSistemi.Data.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HaberSistemi.Core.Infrastructure
 {
-    internal interface IResim
+    public interface IResimRepository : IRepository<Resim>
     {
     }
 }
