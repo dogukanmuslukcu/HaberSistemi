@@ -2,7 +2,6 @@
 using Autofac.Integration.Mvc;
 using HaberSistemi.Core.Infrastructure;
 using HaberSistemi.Core.Repository;
-using HaberSistemi.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
