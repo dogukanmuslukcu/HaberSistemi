@@ -1,4 +1,5 @@
 ﻿using HaberSistemi.Core.Infrastructure;
+using HaberSistemi.Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,16 @@ namespace HaberSistemi.Admin.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+        [HttpGet]
+        public ActionResult Ekle() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Ekle(Kategori kategori)
+        {
+            return Json(1,JsonRequestBehavior.AllowGet);
         }
     }
 }
