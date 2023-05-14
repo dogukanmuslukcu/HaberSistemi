@@ -33,10 +33,10 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="~/Content/index2.html"><b>Giriş yapınız</b>></a>
+            <a href="~/Content/index2.html"><b>Giriş yapınız</b></a>
         </div>
         <!-- /.login-logo -->
-        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+       @using (Html.BeginForm("Login", "Account", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
             <div class="login-box-body">
