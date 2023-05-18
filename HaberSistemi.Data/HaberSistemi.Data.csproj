@@ -102,9 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext\HaberContext.cs" />
-    <Compile Include="Migrations\202303251046205_Olustur.cs" />
-    <Compile Include="Migrations\202303251046205_Olustur.designer.cs">
-      <DependentUpon>202303251046205_Olustur.cs</DependentUpon>
+    <Compile Include="Migrations\202305181057477_Olustur.cs" />
+    <Compile Include="Migrations\202305181057477_Olustur.designer.cs">
+      <DependentUpon>202305181057477_Olustur.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Haber.cs" />
@@ -119,8 +119,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303251046205_Olustur.resx">
-      <DependentUpon>202303251046205_Olustur.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305181057477_Olustur.resx">
+      <DependentUpon>202305181057477_Olustur.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

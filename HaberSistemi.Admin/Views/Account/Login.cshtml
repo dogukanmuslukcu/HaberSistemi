@@ -36,7 +36,7 @@
             <a href="~/Content/index2.html"><b>Giriş yapınız</b></a>
         </div>
         <!-- /.login-logo -->
-       @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
             <div class="login-box-body">
@@ -78,13 +78,14 @@
     <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
     <!-- iCheck -->
     <script src="~/Content/plugins/iCheck/icheck.min.js"></script>
-    <script>$(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  });</script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+        });</script>
 </body>
 </html>
 
