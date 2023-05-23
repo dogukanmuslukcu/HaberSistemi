@@ -1,9 +1,9 @@
 ﻿function KategoriEkle()
 {
     Kategori = new Object();
-    Kategori.Adi = $("#kategoriAdi").val();
-    Kategori.Url = $("#kategoriUrl").val();
-    Kategori.Aktif = $("#kategoriAktif").is(":checked");
+    Kategori.KategoriAdi = $("#kategoriAdi").val();
+    Kategori.URL = $("#kategoriUrl").val();
+    Kategori.AktifMi = $("#kategoriAktif").is(":checked");
     alert(Kategori.Adi + Kategori.Url + Kategori.Aktif);
 
     $.ajax({
