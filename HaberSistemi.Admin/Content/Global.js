@@ -4,7 +4,6 @@
     Kategori.KategoriAdi = $("#kategoriAdi").val();
     Kategori.URL = $("#kategoriUrl").val();
     Kategori.AktifMi = $("#kategoriAktif").is(":checked");
-    alert(Kategori.KategoriAdi + Kategori.URL + Kategori.AktifMi);
 
     $.ajax({
         url: "Kategori/Ekle",
@@ -13,10 +12,14 @@
         success: function (response)
         {
             if (response.success) {
-                alert(1);
+                bootbox.alert(response.Message, function () {
+                    location.reload();
+                });
             } else
             {
-                alert(2);
+                bootbox.alert(response.Message, function () {
+
+                });
             }
         }
     })
