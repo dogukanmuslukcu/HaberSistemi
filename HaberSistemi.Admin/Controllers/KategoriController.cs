@@ -27,6 +27,7 @@ namespace HaberSistemi.Admin.Controllers
         [HttpGet]
         public ActionResult Ekle() 
         {
+            SetKategoriListele();
             return View();
         }
         [HttpPost]
@@ -45,5 +46,14 @@ namespace HaberSistemi.Admin.Controllers
             }
             
         }
+        #region Set Kategori
+        public void SetKategoriListele() 
+        {
+            var  KategoriList = _kategoriRepository.GetMany(x=> x.ParentId == 0).ToList();
+            ViewBag.Kategori = KategoriList;
+
+        }
+        #endregion
+
     }
 }
