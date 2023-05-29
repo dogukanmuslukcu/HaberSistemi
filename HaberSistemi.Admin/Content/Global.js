@@ -4,8 +4,8 @@
     Kategori.KategoriAdi = $("#KategoriAdi").val();
     Kategori.URL = $("#KategoriUrl").val();
     Kategori.AktifMi = $("#KategoriAktif").is(":checked");
-    Kategori.ParentID = $("#ParentID").val();
-    alert(Kategori.ParentID);
+    Kategori.ParentId = $("#ParentId").val();
+    alert(Kategori.ParentId);
     $.ajax({
         url: "Kategori/Ekle",
         data: Kategori,

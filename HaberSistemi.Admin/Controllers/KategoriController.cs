@@ -20,7 +20,8 @@ namespace HaberSistemi.Admin.Controllers
             _kategoriRepository = kategoriRepository;
         }
         #endregion
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Listele()
         {
             return View();
         }

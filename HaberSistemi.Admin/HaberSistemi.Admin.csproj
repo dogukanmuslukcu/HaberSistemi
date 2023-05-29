@@ -1202,6 +1202,7 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Kategori\Ekle.cshtml" />
+    <Content Include="Views\Kategori\Listele.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
