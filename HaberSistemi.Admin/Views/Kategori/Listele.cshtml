@@ -1,4 +1,4 @@
-﻿@model HaberSistemi.Data.Model.Kategori
+﻿@model  IEnumerable<HaberSistemi.Data.Model.Kategori>
 
 @{
     ViewBag.Title = "Kategori Listele";
@@ -32,25 +32,32 @@
                             <th>İşlemler</th>
                         </tr>
                         <tr>
-                            @foreach (var item in Model)
+                            @if (Model != null)
                             {
-                                <td>@item.ParentID</td>
-                                <td>@item.KategoriAdi</td>
-                                <td><span class="label label-success">@item.ID</span></td>
-                                <td>
-                                    @if (@item.AktifMi == true)
-                                    {
-                                    <td><span class="label label-success">Aktif</span></td>
-                                }
-
-                                else
+                                @foreach (var item in Model)
                                 {
-                                    <td><span class="label label-danger">Pasif</span></td>
+                                    <td>@item.ParentId</td>
+                                    <td>@item.KategoriAdi</td>
+                                    <td><span class="label label-success">@item.ID</span></td>
+                                    <td>
+                                        @if (@item.AktifMi == true)
+                                        {
+                                        <td><span class="label label-success">Aktif</span></td>
+                                    }
 
-                                }
-                                    </td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                }
+                                    else
+                                    {
+                                        <td><span class="label label-danger">Pasif</span></td>
+
+                                    }
+                                        </td>
+                                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    }
+
+
+
+                            }
+
                         </tr>
                     </tbody>
                 </table>
