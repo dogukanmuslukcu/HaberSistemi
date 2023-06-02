@@ -1,4 +1,5 @@
-﻿
+﻿@model HaberSistemi.Data.Model.Kategori
+
 @{
     ViewBag.Title = "Kategori Listele";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -25,38 +26,31 @@
                     <tbody>
                         <tr>
                             <th>ID</th>
-                            <th>Kategori Adı</th>
+                            <th>KategoriAdi</th>
                             <th>Üst kategori</th>
                             <th>Durum</th>
                             <th>İşlemler</th>
                         </tr>
                         <tr>
-                            <td>183</td>
-                            <td>John Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-success">Approved</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                        <tr>
-                            <td>219</td>
-                            <td>Alexander Pierce</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-warning">Pending</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                        <tr>
-                            <td>657</td>
-                            <td>Bob Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-primary">Approved</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                        </tr>
-                        <tr>
-                            <td>175</td>
-                            <td>Mike Doe</td>
-                            <td>11-7-2014</td>
-                            <td><span class="label label-danger">Denied</span></td>
-                            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                            @foreach (var item in Model)
+                            {
+                                <td>@item.ParentID</td>
+                                <td>@item.KategoriAdi</td>
+                                <td><span class="label label-success">@item.ID</span></td>
+                                <td>
+                                    @if (@item.AktifMi == true)
+                                    {
+                                    <td><span class="label label-success">Aktif</span></td>
+                                }
+
+                                else
+                                {
+                                    <td><span class="label label-danger">Pasif</span></td>
+
+                                }
+                                    </td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                }
                         </tr>
                     </tbody>
                 </table>
