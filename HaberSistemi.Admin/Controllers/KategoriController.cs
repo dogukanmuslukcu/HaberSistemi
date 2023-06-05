@@ -23,7 +23,7 @@ namespace HaberSistemi.Admin.Controllers
         [HttpGet]
         public ActionResult Listele()
         {
-            return View();
+            return View(_kategoriRepository.GetAll().ToList()); 
         }
         [HttpGet]
         public ActionResult Ekle() 

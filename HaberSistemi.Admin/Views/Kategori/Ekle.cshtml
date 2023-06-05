@@ -11,22 +11,24 @@
         <div class="box-body">
             <div class="form-group">
                 <label for="exampleInputEmail">Üst Kategori</label>
-                @Html.DropDownListFor(model => model.KategoriAdi, new SelectList(ViewBag.Kategori, "ID", "KategoriAdi"), ("Seçiniz"), new { @class = "form-control", id = "ParentID" })
+                @Html.DropDownListFor(Model => Model.KategoriAdi, new SelectList(ViewBag.Kategori, "ID", "KategoriAdi"), ("Seçiniz"), new { @class = "form-control", id = "ParentId" })
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail">Kategori Adı</label>
-                <input type="text" class="form-control" id="kategoriAdi" placeholder="Kategori Adı">
+                <label for="exampleInputEmail1">Kategori Adı</label>
+                <input type="text" class="form-control" id="KategoriAdi" placeholder="Kategori Adı">
             </div>
             <div class="form-group">
-                <label for="KategoriUrl">Kategori URL</label>
-                <input type="text" class="form-control" id="kategoriUrl" placeholder="URL">
+                <label for="exampleInputPassword1">Kategori URL</label>
+                <input type="text" class="form-control" id="KategoriUrl" placeholder="URL">
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" checked id="kategoriAktif">Aktif mi
+                    <input type="checkbox" checked id="KategoriAktif">Aktif Mi?
                 </label>
             </div>
             <a href="#" class="btn btn-default" onclick="KategoriEkle();">Kaydet</a>
         </div>
     </form>
 </div>
+<script src="~/Content/bootbox.min.js"></script>
+<script src="~/Content/Global.js"></script>

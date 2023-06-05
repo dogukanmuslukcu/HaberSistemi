@@ -1,28 +1,26 @@
-﻿function KategoriEkle()
-{
-    Kategori = new Object();
-    Kategori.KategoriAdi = $("#kategoriAdi").val();
-    Kategori.URL = $("#kategoriUrl").val();
-    Kategori.AktifMi = $("#kategoriAktif").is(":checked");
+﻿function KategoriEkle() {
+    var Kategori = {};
+    Kategori.KategoriAdi = $("#KategoriAdi").val();
+    Kategori.URL = $("#KategoriUrl").val();
+    Kategori.AktifMi = $("#KategoriAktif").is(":checked");
     Kategori.ParentId = $("#ParentId").val();
-    alert(Kategori.ParentId);
     $.ajax({
         url: "/Kategori/Ekle",
-        data: Json.stringify(Kategori),
+        data: JSON.stringify(Kategori),
         type: "POST",
-        dataType:"json",
-        success: function (response)
-        {
-            if (response.success) {
+        dataType: "json",
+        success: function (response) {
+            if (response.Success) {
                 bootbox.alert(response.Message, function () {
                     location.reload();
                 });
-            } else
-            {
+            }
+            else {
                 bootbox.alert(response.Message, function () {
 
                 });
+
             }
         }
-    })
+    });
 }
